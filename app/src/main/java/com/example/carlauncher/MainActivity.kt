@@ -95,8 +95,8 @@ class MainActivity : Activity() {
                     setColor(Color.parseColor("#141B24"))
                 }
             }
-            tile.addView(ImageView(context).apply { setImageDrawable(app.icon) }, LinearLayout.LayoutParams(dp(72), dp(72)))
-            tile.addView(TextView(context).apply {
+            tile.addView(ImageView(this@MainActivity).apply { setImageDrawable(app.icon) }, LinearLayout.LayoutParams(dp(72), dp(72)))
+            tile.addView(TextView(this@MainActivity).apply {
                 text = app.label; textSize = 14f; maxLines = 1
                 setTextColor(Color.WHITE); gravity = Gravity.CENTER
                 ellipsize = android.text.TextUtils.TruncateAt.END
